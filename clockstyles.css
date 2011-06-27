@@ -30,6 +30,8 @@ body { height:100%; overflow:hidden; }
 
 #social { padding-top:4px; }
 
+#gitImg { height:40px; padding-bottom:10px; border:none; }
+
 #map_canvas { height:100%; }
 
 #city_info { 

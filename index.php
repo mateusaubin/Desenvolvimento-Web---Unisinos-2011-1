@@ -32,6 +32,18 @@ $selectedLocationIndex = (is_numeric($_GET["local"]) ? (int)$_GET["local"] : mt_
     <meta property="og:title" content="Relógio Semântico Mundial"/>
     <meta property="og:type" content="website"/>
     <meta property="og:description" content="Atividade da disciplina Desenvolvimento Web 2011/1. Relógio com tecnologia CSS3 e JavaScript, integrado com a API do Google Maps e extraindo informações de fontes Semânticas sobre determinadas localidades."/>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24163855-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </head>
   <body>
     <form id="formHeader" class="dest">
@@ -72,9 +84,11 @@ $response = request_cache($srcUrl, $term.'.dbpedia');
 ?>
       </select>
       <div id="social">
-      <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="mateusaubin">Tweet</a>
-      &nbsp;&nbsp;&nbsp;
-      <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo curPageURL(); ?>&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:60px;" allowTransparency="true"></iframe>
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="mateusaubin">Tweet</a>
+        &nbsp;
+        <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo curPageURL(); ?>&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:60px;" allowTransparency="true"></iframe>
+        &nbsp;
+        <a href="https://github.com/mateusaubin/Desenvolvimento-Web---Unisinos-2011-1" title="Confira este projeto no GitHub"><img id="gitImg" alt="Confira este projeto no GitHub" src="github.png"/></a>
       </div>
     </form>
     <div id="map_canvas"></div>
