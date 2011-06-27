@@ -1,4 +1,5 @@
 <?php
+//ini_set('display_errors', 1); error_reporting(E_ALL);
 
 $executionTime = microtime(true);
 include_once './common.php';

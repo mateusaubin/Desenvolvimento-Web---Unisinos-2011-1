@@ -1,4 +1,5 @@
 <?php
+//ini_set('display_errors', 1); error_reporting(E_ALL);
 
 /* Baseado no código do Yahoo { http://developer.yahoo.com/php/howto-cacheRestPhp.html }
 ** Função utilizada como Cache para evitar atingir o servidor remoto o tempo todo.
