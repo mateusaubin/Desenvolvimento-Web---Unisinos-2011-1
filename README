@@ -1,0 +1,14 @@
+Relógio mundial com integração Google Maps e consultas externas; 
+Fonte: https://github.com/mateusaubin/Desenvolvimento-Web---Unisinos-2011-1;
+
+Utilizando como ponto de partida a primeira implementação realizada na disciplina, o conceito foi aumentado, passando de um relógio local simples para um relógio mundial. 
+O relógio funciona utilizando como base o horário da maquina cliente mas lendo valores UTC (hora de Greenwich), enquanto isso o script de servidor consulta a um dataset hospedado na web e em formato JSON que contém os deslocamentos de hora para uma tabela comum de localizações. 
+De posse destas informações é gerada uma lista com as localizações disponíveis, possibilitando a consulta à hora local selecionada. 
+Além disso foi realizada uma integração com a API do Google Maps para mostrar ao usuário a posição geográfica da localização selecionada. 
+Os marcadores no mapa indicam o fuso do local selecionado. 
+Em um terceiro momento foi realizada a integração com uma fonte de dados semântica (fornecida pela DBPedia.org) para buscar informações sobre as localidades.
+
+Observações: As marcações são processadas pela API do Google Maps, o que pode ocasionar em erros nas localizações. Este comportamento é devido à string de busca, do tipo 'America-Sao_Paulo', e poderia ser solucionado utilizando uma base com localizações mais específicas (além dos respectivos fusos), porém não foram encontrados datasets livremente disponíveis com estas características. É utilizado no lado do servidor um cache para o arquivo de localizações/fusos, visando diminuir a latência das requisições e evitar acessos excessivos ao servidor remoto. o arquivo está programado para ser atualizado de 6 em 6 horas. Porém ao hospedar a página no servidor da disciplina recebi mensagens de erro dizendo que determinada funcionalidade estava desativada, impossibilitando o download do dataset. Caso isso aconteça peço que entre em contato comigo ou tente hospedar a página localmente (evidenciei o funcionamento na instalação padrão do LAMP stack utilizando como base a distribuição Ubuntu).
+
+
+Mateus R. Aubin
